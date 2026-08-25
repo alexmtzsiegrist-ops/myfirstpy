@@ -13,8 +13,16 @@
   <main class="shell">
     <header class="masthead">
       <a class="brand" href="/">figment<span>.</span></a>
-      <div class="status"><i></i> Python powered</div>
+      <div class="header-actions"><div class="status"><i></i> Python powered</div><button class="menu-toggle" id="menu-toggle" aria-label="Open calculator modes" aria-expanded="false">☰</button></div>
     </header>
+
+    <aside class="sidebar" id="sidebar" aria-label="Calculator modes">
+      <div class="sidebar-head"><span>MODES</span><button id="close-sidebar" aria-label="Close calculator modes">×</button></div>
+      <button class="mode-link active" data-mode="basic"><span>01</span> Everyday</button>
+      <button class="mode-link" data-mode="scientific"><span>02</span> Scientific</button>
+      <p class="sidebar-note">Explore expressions<br>with more room to think.</p>
+    </aside>
+    <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
 
     <section class="workspace" aria-label="Calculator workspace">
       <div class="intro">
@@ -52,6 +60,28 @@
           <button class="key" data-action="decimal">.</button>
           <button class="key equals" data-action="equals">=</button>
         </div>
+      </div>
+
+      <div class="scientific-card" id="scientific-card">
+        <div class="card-topline"><span>FIG / 02</span><span id="scientific-mode">SCIENTIFIC</span></div>
+        <div class="scientific-display"><div class="expression">Supports ( ), ^, pi and functions</div><input id="scientific-input" aria-label="Scientific expression" placeholder="e.g. (2 + 3)^2" autocomplete="off"><output id="scientific-result">0</output></div>
+        <div class="scientific-keys">
+            <div class="scientific-tools">
+              <button data-insert="(" class="key utility">(</button><button data-insert=")" class="key utility">)</button><button data-insert="^" class="key operator">xʸ</button><button data-insert="pi" class="key operator">π</button><button data-action="scientific-clear" class="key utility">AC</button>
+              <button data-insert="sqrt(" class="key">√</button><button data-insert="sin(" class="key">sin</button><button data-insert="cos(" class="key">cos</button><button data-insert="tan(" class="key">tan</button><button data-insert="log(" class="key">log</button>
+              <button data-insert="ln(" class="key">ln</button><button data-insert="abs(" class="key">abs</button>
+            </div>
+            <div class="scientific-number-pad">
+              <button data-insert="7" class="key">7</button><button data-insert="8" class="key">8</button><button data-insert="9" class="key">9</button>
+              <button data-insert="4" class="key">4</button><button data-insert="5" class="key">5</button><button data-insert="6" class="key">6</button>
+              <button data-insert="1" class="key">1</button><button data-insert="2" class="key">2</button><button data-insert="3" class="key">3</button>
+              <button data-insert="0" class="key scientific-zero">0</button><button data-insert="." class="key">.</button>
+            </div>
+            <div class="scientific-operators">
+              <button data-insert="/" class="key operator">÷</button><button data-insert="*" class="key operator">×</button><button data-insert="-" class="key operator">−</button><button data-insert="+" class="key operator">+</button><button data-action="scientific-equals" class="key equals scientific-equals">=</button>
+            </div>
+        </div>
+        <p class="scientific-hint">A complete scientific keypad for expressions with parentheses and powers.</p>
       </div>
 
       <aside class="history-panel">

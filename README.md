@@ -11,6 +11,9 @@ Figment is a beautifully designed, Python-powered pocket calculator for everyday
 - Clear division-by-zero error handling
 - Responsive design for desktop and mobile
 - Works with the Python API or directly as a local HTML page
+- Collapsible mode sidebar with a scientific calculator
+- Complete scientific keypad with numbers and arithmetic controls
+- Scientific expressions with parentheses, powers, constants, and functions
 
 ## Getting Started
 
@@ -36,6 +39,18 @@ You can also open `index.html` directly in a browser. In this mode, the calculat
 - `index.html` - Calculator structure and accessible controls
 - `styles.css` - Responsive visual design
 - `app.js` - Calculator interactions, keyboard support, and history
+
+## Scientific Calculator
+
+Open the mode menu with the menu button in the top-right corner and select **Scientific**. You can evaluate expressions such as:
+
+```text
+(2 + 3)^2
+sqrt(81) + 2^3
+sin(pi / 2)
+```
+
+Supported functions include `sqrt`, `sin`, `cos`, `tan`, `log`, `ln`, and `abs`. The scientific calculator is available through the Python API and also works when `index.html` is opened directly.
 
 ## Technology
 
