@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Figment Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="masthead">
+      <a class="brand" href="/">figment<span>.</span></a>
+      <div class="status"><i></i> Python powered</div>
+    </header>
+
+    <section class="workspace" aria-label="Calculator workspace">
+      <div class="intro">
+        <p class="kicker">Everyday arithmetic, considered</p>
+        <h1>Make room<br>for the <em>answer.</em></h1>
+        <p class="description">A quiet little calculator for the numbers that keep your day moving.</p>
+        <div class="rule"></div>
+        <p class="tip"><span>TIP</span> Use your keyboard for a faster rhythm.</p>
+      </div>
+
+      <div class="calculator-card">
+        <div class="card-topline"><span>FIG / 01</span><span id="mode-label">READY</span></div>
+        <div class="display-wrap">
+          <div class="expression" id="expression">Ready when you are</div>
+          <output class="display" id="display" aria-live="polite">0</output>
+        </div>
+        <div class="keypad">
+          <button class="key utility" data-action="clear">AC</button>
+          <button class="key utility" data-action="sign">+/-</button>
+          <button class="key utility" data-action="percent">%</button>
+          <button class="key operator" data-value="/" aria-label="Divide">÷</button>
+          <button class="key" data-value="7">7</button>
+          <button class="key" data-value="8">8</button>
+          <button class="key" data-value="9">9</button>
+          <button class="key operator" data-value="*" aria-label="Multiply">×</button>
+          <button class="key" data-value="4">4</button>
+          <button class="key" data-value="5">5</button>
+          <button class="key" data-value="6">6</button>
+          <button class="key operator" data-value="-" aria-label="Subtract">−</button>
+          <button class="key" data-value="1">1</button>
+          <button class="key" data-value="2">2</button>
+          <button class="key" data-value="3">3</button>
+          <button class="key operator" data-value="+" aria-label="Add">+</button>
+          <button class="key zero" data-value="0">0</button>
+          <button class="key" data-action="decimal">.</button>
+          <button class="key equals" data-action="equals">=</button>
+        </div>
+      </div>
+
+      <aside class="history-panel">
+        <div class="history-heading"><span>Recent</span><button id="clear-history">Clear</button></div>
+        <div id="history" class="history-list"><p class="empty-history">Your recent calculations<br>will appear here.</p></div>
+      </aside>
+    </section>
+    <footer><span>BUILT FOR CLARITY</span><span>LOCAL / 8000</span></footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
