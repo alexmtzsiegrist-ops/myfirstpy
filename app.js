@@ -102,7 +102,7 @@ function toggleSidebar(open) { sidebar.classList.toggle("open", open); document.
 document.querySelector("#menu-toggle").addEventListener("click", () => toggleSidebar(true));
 document.querySelector("#close-sidebar").addEventListener("click", () => toggleSidebar(false));
 document.querySelector("#sidebar-backdrop").addEventListener("click", () => toggleSidebar(false));
-document.querySelectorAll(".mode-link").forEach(link => link.addEventListener("click", () => { document.querySelectorAll(".mode-link").forEach(item => item.classList.remove("active")); link.classList.add("active"); document.querySelector("#scientific-card").classList.toggle("visible", link.dataset.mode === "scientific"); toggleSidebar(false); }));
+document.querySelectorAll(".mode-link").forEach(link => link.addEventListener("click", () => { const scientificMode = link.dataset.mode === "scientific"; document.querySelectorAll(".mode-link").forEach(item => item.classList.remove("active")); link.classList.add("active"); document.querySelector("#scientific-card").classList.toggle("visible", scientificMode); document.querySelector(".calculator-card").classList.toggle("hidden", scientificMode); toggleSidebar(false); }));
 
 document.querySelector(".keypad").addEventListener("click", event => {
   const button = event.target.closest("button"); if (!button) return;
